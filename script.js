@@ -42,7 +42,13 @@ function addWeather(data) {
 		}
 	});
 
-	main.insertAdjacentElement("afterend", button)	
+	button.innerHTML = "°C / °F "
+
+	const button_exist = document.querySelector("button")
+	if (button_exist){
+		button_exist.remove()	
+	}
+	main.insertAdjacentElement("afterend", button)
 }
 
 form.addEventListener("submit", (e) => {
