@@ -42,7 +42,7 @@ function addWeather(data) {
 		}
 	});
 
-	button.innerHTML = "°C / °F "
+	button.innerHTML = "°C or °F "
 
 	//Remove duplicate when re-submiting another value
 	const button_exist = document.querySelector("button")

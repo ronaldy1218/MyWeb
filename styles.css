@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 
 *, *::before, *::after {
+    background-color: white;
     box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
     font-family: "Poppins", sans-serif;
 }
 
@@ -54,3 +54,14 @@ span {
       opacity: 0;
     }
   }
+
+button {
+    border-radius: 50px;
+    padding: 10px;
+    transition: ease-out 0.1s;
+    margin-top: 10px;
+}
+
+button:active {
+    transform: scale(0.9);
+}
