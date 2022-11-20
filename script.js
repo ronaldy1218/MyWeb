@@ -5,7 +5,7 @@ const form = document.getElementById("form")
 const search = document.getElementById("search")
 const main = document.getElementById("main")
 const p = document.getElementById("p")
-
+const body = document.querySelector("body")
 
 async function getWeather(city) {
 	try{
@@ -19,8 +19,8 @@ async function getWeather(city) {
 	} catch (error) {
 		console.error(error);
 	}
-
 }	
+
 function addWeather(data) {
 	const temp_c = Math.floor(data.current.temp_c)
 	const temp_f = Math.floor(data.current.temp_f)
@@ -42,7 +42,12 @@ function addWeather(data) {
 		}
 	});
 
+	button.setAttribute("id", "convertbutton")
 	button.innerHTML = "°C or °F "
+
+	if (body.className == "dark-mode") {
+		button.setAttribute("class", "dark-mode")
+	}
 
 	//Remove duplicate when re-submiting another value
 	const button_exist = document.querySelector("button")
@@ -61,3 +66,15 @@ form.addEventListener("submit", (e) => {
         getWeather(city);
     }
 });
+
+function darkMode() {
+	const ldbutton = document.getElementById("ldbutton");
+	const input = document.getElementById("search");
+	const convertbutton = document.getElementById("convertbutton")
+
+	ldbutton.addEventListener("click", () => {
+		body.classList.toggle("dark-mode");
+		input.classList.toggle("dark-mode");
+		convertbutton.classList.toggle("dark-mode")
+	})
+}
