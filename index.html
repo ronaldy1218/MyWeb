@@ -6,14 +6,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Weather App</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="slider.css">
+        <link href='https://css.gg/sun.css' rel='stylesheet'>
+        <link href='https://css.gg/moon.css' rel='stylesheet'>
         <script src="script.js" defer></script>
     </head>
     <body>
         <div class="container">
+            <label class="switch" id="ldbutton" onclick="darkMode()">
+                <input type="checkbox">
+                <span class="slider round"></span>
+                <div style="display:flex">
+                    <i class="gg-sun"></i><span style="padding-left: 3px; padding-right:3px; font-weight: bold;">/</span>
+                    <i class="gg-moon"></i>
+                </div>
+              </label>
                 <form id="form">
                     <input type="text" placeholder="e.g. London" id="search" autocomplete="off" autofocus="on"></input>
                 </form>
-                <main id="main">Waiting for city<span>  |</span></main>
+                <main id="main">Waiting for city<span class="stroke">  |</span></main>
                 <p id="p"><p>
             <footer>By Ronald Yun</footer>
         </div>
