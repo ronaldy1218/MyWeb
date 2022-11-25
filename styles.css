@@ -3,6 +3,7 @@
 *, *::before, *::after {
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    margin: 0;
 }
 
 body {
@@ -21,7 +22,7 @@ body {
 }
 
 form {
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: center;
 }
@@ -76,4 +77,13 @@ footer {
 .dark-mode {
     background-color: black;
     color: white;
+}
+
+@media (max-width:620px) {
+    form {
+        width: auto;
+    }
+    input {
+        font-size: 20px;
+    }
 }
